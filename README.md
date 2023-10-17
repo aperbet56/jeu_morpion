@@ -6,7 +6,7 @@ Mon challenge a été de créér ma version du célébre jeu : Morpion (Tic tac 
 
 ## Démonstration
 
-Lien vers le projet :
+Lien vers le projet : https://aperbet56.github.io/jeu_morpion/
 
 ## Développez avec
 
