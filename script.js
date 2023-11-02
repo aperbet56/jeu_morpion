@@ -32,7 +32,7 @@ const winningConditions = [
 ];
 
 // Déclaration de la fonction playerTurn qui indique quel joueur doit jouer
-const playerTurn = () => `C'est au tour du joueur ${currentPlayer}`;
+const playerTurn = () => `C'est au tour du joueur ${currentPlayer} !`;
 
 // On affiche quel joueur commence
 statusPlayer.innerHTML = playerTurn(); // Appel de la fonction playerTurn()
