@@ -2,11 +2,15 @@
 const statusPlayer = document.querySelector("h2");
 const cases = document.querySelectorAll(".case");
 const restartBtn = document.querySelector("#restart");
+const scorePlayerX = document.querySelector(".score__playerX");
+const scorePlayerO = document.querySelector(".score__playerO");
 
 // Création de variables
 let activeGame = true;
 let currentPlayer = "X";
 let stateGame = ["", "", "", "", "", "", "", "", ""];
+let scoreX = 0;
+let scoreO = 0;
 
 /*
   Index du tableau
@@ -34,10 +38,19 @@ const playerTurn = () => `C'est au tour du joueur ${currentPlayer}`;
 statusPlayer.innerHTML = playerTurn(); // Appel de la fonction playerTurn()
 
 // Déclaration de la fonction Win qui affiche le vainqueur
-const win = () => `Le joueur ${currentPlayer} a gagné`;
+const win = () => {
+  if (currentPlayer === "X") {
+    scoreX++;
+    scorePlayerX.textContent = scoreX;
+  } else {
+    scoreO++;
+    scorePlayerO.textContent = scoreO;
+  }
+  return `Le joueur ${currentPlayer} a gagné !`;
+};
 
 // Déclaration de la fonction tie qui indique que la partie n'a pas de vainqueur
-const tie = () => "Egalité";
+const tie = () => "Egalité !";
 
 /**
  * Déclaration de la fonction clickCase qui gère le clic sur les cases du jeu
