@@ -37,7 +37,7 @@ const playerTurn = () => `C'est au tour du joueur ${currentPlayer}`;
 // On affiche quel joueur commence
 statusPlayer.innerHTML = playerTurn(); // Appel de la fonction playerTurn()
 
-// Déclaration de la fonction Win qui affiche le vainqueur
+// Déclaration de la fonction win qui affiche le vainqueur, affiche les scores des deux joueurs et les met à jour
 const win = () => {
   if (currentPlayer === "X") {
     scoreX++;
